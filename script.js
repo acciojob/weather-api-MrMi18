@@ -10,7 +10,7 @@ const fetchData = async () => {
   console.log(json.weather[0].main);
   div.innerText = `Current weather in London: ${json.weather[0].main}`;
   div.id = "weatherData";
-  body.append(p);
+  body.append(div);
 };
 
 btn.addEventListener("click", fetchData);
