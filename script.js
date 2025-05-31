@@ -3,13 +3,13 @@ const API_URL =
 let body = document.getElementsByTagName("body")[0];
 let h = document.getElementsByTagName("h1");
 let btn = document.getElementsByTagName("button")[0];
-let p = document.createElement("p");
-console.log(body);
+let div = document.createElement("div");
 const fetchData = async () => {
   const res = await fetch(API_URL);
   const json = await res.json();
   console.log(json.weather[0].main);
-  p.innerText = `Current weather in London: ${json.weather[0].main}`;
+  div.innerText = `Current weather in London: ${json.weather[0].main}`;
+  div.id = "weatherData";
   body.append(p);
 };
 
